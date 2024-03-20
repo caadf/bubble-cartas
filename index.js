@@ -81,15 +81,14 @@ function ordenarCartas() {
     
     for (let i = 0; i < len - 1; i++) {
 
-        /* let min = i; // 0 */
-        for (let j = 0; j < len - 1; j++) {
-            if (cartas[j] > cartas[j + 1]) {
+        for (let j = 0; j < len - 1; i++) {
+            if (cartas[j].nUmero > cartas[j + 1].nUmero) {
              const temp = cartas [j];
              cartas [j] = cartas [j+1];
-             cartas [j+1] = temp
+             cartas [j+1] = temp;
             }
         }
-        
+
         
         contenedor = document.createElement("div");
         contenedor.style.display = "flex" 
@@ -139,5 +138,5 @@ function changeValue(value) {
 
         default: return value;
     }
-}
+} 
 
