@@ -81,12 +81,14 @@ function ordenarCartas() {
     
     for (let i = 0; i < len - 1; i++) {
 
-        for (let j = 0; j < len - 1; i++) {
-            if (cartas[j].nUmero > cartas[j + 1].nUmero) {
-             const temp = cartas [j];
-             cartas [j] = cartas [j+1];
-             cartas [j+1] = temp;
+        for (let j = 0; j < len - 1; j++) { 
+            if (cartas[j].nUmero> cartas[j + 1].nUmero) {
+                
+                const temp = cartas[j]; 
+                cartas[j] = cartas[j + 1];
+                cartas[j + 1] = temp;
             }
+
         }
 
         
