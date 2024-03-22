@@ -81,46 +81,49 @@ function ordenarCartas() {
     
     for (let i = 0; i < len - 1; i++) {
 
+       
         for (let j = 0; j < len - 1; j++) { 
+
             if (cartas[j].nUmero> cartas[j + 1].nUmero) {
-                
+
+
                 const temp = cartas[j]; 
                 cartas[j] = cartas[j + 1];
                 cartas[j + 1] = temp;
             }
 
-        }
-
-        
-        contenedor = document.createElement("div");
-        contenedor.style.display = "flex" 
-        
-        
-        for (x=0; x < len; x++){
+            contenedor = document.createElement("div");
+            contenedor.style.display = "flex" 
             
-            ordenado.appendChild(contenedor);
-            let cartaNueva = document.createElement("div");
-            let carta = contenedor.appendChild(cartaNueva);
-            cartaNueva.classList.add("card");
-            let iconoArriba = document.createElement("div")
-            let iconoIzq = cartaNueva.appendChild(iconoArriba).classList.add("iconoArriba");
-            iconoArriba.innerHTML = cartas[x].iCono;
-            let contenidoNumero = document.createElement("div")
-            let elNumero = cartaNueva.appendChild(contenidoNumero).classList.add("number");
-            contenidoNumero.innerHTML = changeValue(cartas[x].nUmero);
-            let iconoAbajo = document.createElement("div")
-            let iconoDere = cartaNueva.appendChild(iconoAbajo).classList.add("iconoAbajo");
-            iconoAbajo.innerHTML = cartas[x].iCono;
-            if (cartas[x].iCono == "♦" || cartas[x].iCono == "♥") {
-                iconoArriba.style.color = "red";
-                iconoAbajo.style.color = "red";
+            for (x=0; x < len; x++){
+                
+                ordenado.appendChild(contenedor);
+                let cartaNueva = document.createElement("div");
+                let carta = contenedor.appendChild(cartaNueva);
+                cartaNueva.classList.add("card");
+                let iconoArriba = document.createElement("div")
+                let iconoIzq = cartaNueva.appendChild(iconoArriba).classList.add("iconoArriba");
+                iconoArriba.innerHTML = cartas[x].iCono;
+                let contenidoNumero = document.createElement("div")
+                let elNumero = cartaNueva.appendChild(contenidoNumero).classList.add("number");
+                contenidoNumero.innerHTML = changeValue(cartas[x].nUmero);
+                let iconoAbajo = document.createElement("div")
+                let iconoDere = cartaNueva.appendChild(iconoAbajo).classList.add("iconoAbajo");
+                iconoAbajo.innerHTML = cartas[x].iCono;
+                if (cartas[x].iCono == "♦" || cartas[x].iCono == "♥") {
+                    iconoArriba.style.color = "red";
+                    iconoAbajo.style.color = "red";
+                }
+                
+            
+                console.log(contenedor);
+    
             }
-            
-        
-            console.log(contenedor);
+
 
         }
-
+        
+       
 
     }
 
