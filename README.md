@@ -1,5 +1,5 @@
 ### Ordenando Cartas método Bubble
-Crear cartas y permitir que genere una lista de cartas al azar y luego utlizar el método de ordenamiento Bubble. Se usa las tecnologías HTML, CSS, Javascript.
+Crear cartas y permitir que genere una lista de cartas al azar y luego utilizar el método de ordenamiento Bubble. Se usa las tecnologías HTML, CSS, Javascript.
 
  #### Fundamentos :
 - Crea una función que genere una lista de cartas al azar.
